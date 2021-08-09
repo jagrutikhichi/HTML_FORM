@@ -105,6 +105,18 @@
         });
         console.log(number);
     </script>
+    <script>
+        const pwd = document.querySelector('#pwd');
+        const passworderror = document.querySelector('.pwd-error');
+        pwd.addEventListener('input', function() {
+            let passwordpattern = RegExp('^(?=[0-9 A-Z a-z !@#$%^&*();:]{8,}$)(?=.*[A-Z]{1,})(?=.*[0-9]{1,})(?=.*[!@#$%^&*();:]{1,}).*$');
+            if (passwordpattern.test(pwd.value))
+                passworderror.textContent = ' ';
+            else
+                passworderror.textContent = 'Password is Incorrect!';
+        });
+        console.log(pwd);
+    </script>
 
 
 </body>
