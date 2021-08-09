@@ -93,6 +93,18 @@
         });
         console.log(email);
     </script>
+    <script>
+        const number = document.querySelector('#number');
+        const numbererror = document.querySelector('.number-error');
+        number.addEventListener('input', function() {
+            let numberpattern = RegExp('^[1-9]{1}[0-9]{9}$');
+            if (numberpattern.test(number.value))
+                numbererror.textContent = ' ';
+            else
+                numbererror.textContent = 'Number is Incorrect!';
+        });
+        console.log(number);
+    </script>
 
 
 </body>
